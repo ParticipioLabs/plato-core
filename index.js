@@ -1,9 +1,13 @@
-const UserSchema = require("./schemas/user");
-const OrganizationSchema = require("./schemas/organization");
+const UserSchema = require("./db/schemas/user");
+const OrganizationSchema = require("./db/schemas/organization");
+const getConnection = require("./db/getConnection");
 
 module.exports = {
-  schemas: {
-    OrganizationSchema,
-    UserSchema,
+  db: {
+    schemas: {
+      OrganizationSchema,
+      UserSchema,
+    },
+    getConnection,
   },
 };
