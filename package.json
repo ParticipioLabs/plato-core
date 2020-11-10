@@ -1,0 +1,22 @@
+{
+  "name": "plato-core",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Edgeryders-Participio/plato-core.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Edgeryders-Participio/plato-core/issues"
+  },
+  "homepage": "https://github.com/Edgeryders-Participio/plato-core#readme",
+  "dependencies": {
+    "mongoose": "^5.10.13"
+  }
+}
