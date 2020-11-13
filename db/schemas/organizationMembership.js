@@ -1,6 +1,6 @@
 const { Schema } = require("mongoose");
 
-const UserSchema = new Schema({
+const OrganizationMembershipSchema = new Schema({
   keycloakId: { type: String, index: true, required: true },
   organizationId: { type: Schema.Types.ObjectId, index: true, required: true },
   bio: String,
@@ -14,4 +14,4 @@ const UserSchema = new Schema({
   },
 }).index({ keycloakId: 1, organizationId: 1 }, { unique: true }); // Unique on email + organization Id
 
-module.exports = UserSchema;
+module.exports = OrganizationMembershipSchema;
