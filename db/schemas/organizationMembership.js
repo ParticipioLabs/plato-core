@@ -12,6 +12,6 @@ const OrganizationMembershipSchema = new Schema({
     type: Boolean,
     default: false,
   },
-}).index({ keycloakId: 1, organizationId: 1 }, { unique: true }); // Unique on email + organization Id
+}).index({ keycloakId: 1, organizationId: 1 }, { unique: true }); // Unique on keycloak id + organization Id
 
 module.exports = OrganizationMembershipSchema;
