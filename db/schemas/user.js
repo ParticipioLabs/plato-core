@@ -1,17 +1,8 @@
-const { Schema } = require('mongoose');
+const { Schema } = require("mongoose");
 
 const UserSchema = new Schema({
-  name: String,
-  avatar: String,
+  keycloakId: { type: String, index: true, required: true },
   bio: String,
-  email: {
-    type: String,
-    required: true,
-  },
-  verifiedEmail: {
-    type: Boolean,
-    default: false,
-  },
   createdAt: {
     type: Date,
     default: Date.now,
@@ -21,10 +12,6 @@ const UserSchema = new Schema({
     type: Boolean,
     default: false,
   },
-  isRootAdmin: {
-    type: Boolean,
-    default: false,
-  },
-}).index({ email: 1, organizationId: 1 }, { unique: true }); // Unique on email + organization Id
+}).index({ keycloakId: 1, organizationId: 1 }, { unique: true }); // Unique on email + organization Id
 
 module.exports = UserSchema;
