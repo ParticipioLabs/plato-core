@@ -1,5 +1,5 @@
-const OrganizationMembershipSchema = require("./db/schemas/organizationMembership");
-const OrganizationSchema = require("./db/schemas/organization");
+const OrgMemberSchema = require("./schemas/orgMember");
+const OrganizationSchema = require("./schemas/organization");
 const getConnection = require("./db/getConnection");
 const getModels = require("./db/getModels");
 
@@ -7,7 +7,7 @@ module.exports = {
   db: {
     schemas: {
       OrganizationSchema,
-      OrganizationMembershipSchema,
+      OrgMemberSchema,
     },
     getConnection,
     getModels,
