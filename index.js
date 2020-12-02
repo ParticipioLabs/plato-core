@@ -1,5 +1,5 @@
-const OrgMemberSchema = require("./schemas/orgMember");
-const OrganizationSchema = require("./schemas/organization");
+const OrgMemberSchema = require("./db/schemas/orgMember");
+const OrganizationSchema = require("./db/schemas/organization");
 const getConnection = require("./db/getConnection");
 const getModels = require("./db/getModels");
 
