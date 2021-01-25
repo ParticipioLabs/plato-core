@@ -12,6 +12,7 @@ const OrgMemberSchema = new Schema({
     type: Boolean,
     default: false,
   },
+  discourseUsername: String,
 }).index({ userId: 1, organizationId: 1 }, { unique: true }); // Unique on keycloak id + organization Id
 
 module.exports = OrgMemberSchema;
