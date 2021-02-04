@@ -16,6 +16,10 @@ const OrganizationSchema = new Schema({
     sparse: true,
   },
   logo: String,
+  discourse: new Schema({
+    url: String,
+    apiKey: String,
+  })
 }).index({ name: 'text', subdomain: 'text', customDomain: 'text' });
 
 module.exports = OrganizationSchema;
