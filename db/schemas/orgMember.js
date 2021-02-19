@@ -13,6 +13,7 @@ const OrgMemberSchema = new Schema({
     default: false,
   },
   discourseUsername: String,
+  discourseApiKey: String,
 }).index({ userId: 1, organizationId: 1 }, { unique: true }); // Unique on keycloak id + organization Id
 
 module.exports = OrgMemberSchema;

@@ -1,4 +1,4 @@
-const { Schema } = require('mongoose');
+const { Schema } = require("mongoose");
 
 const OrganizationSchema = new Schema({
   name: {
@@ -19,7 +19,7 @@ const OrganizationSchema = new Schema({
   discourse: new Schema({
     url: String,
     apiKey: String,
-  })
-}).index({ name: 'text', subdomain: 'text', customDomain: 'text' });
+  }),
+}).index({ name: "text", subdomain: "text", customDomain: "text" });
 
 module.exports = OrganizationSchema;
