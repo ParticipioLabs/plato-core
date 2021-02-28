@@ -19,6 +19,7 @@ const OrganizationSchema = new Schema({
   discourse: new Schema({
     url: String,
     apiKey: String,
+    dreamsCategoryId: Number,
   }),
 }).index({ name: "text", subdomain: "text", customDomain: "text" });
 
