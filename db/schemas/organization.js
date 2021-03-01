@@ -16,11 +16,11 @@ const OrganizationSchema = new Schema({
     sparse: true,
   },
   logo: String,
-  discourse: new Schema({
+  discourse: {
     url: String,
     apiKey: String,
     dreamsCategoryId: Number,
-  }),
+  },
 }).index({ name: "text", subdomain: "text", customDomain: "text" });
 
 module.exports = OrganizationSchema;
