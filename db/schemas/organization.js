@@ -21,6 +21,11 @@ const OrganizationSchema = new Schema({
     apiKey: String,
     dreamsCategoryId: Number,
   },
+  finishedTodos: {
+    type: Boolean,
+    required: true,
+    default: false,
+  },
 }).index({ name: "text", subdomain: "text", customDomain: "text" });
 
 module.exports = OrganizationSchema;
