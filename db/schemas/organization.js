@@ -20,10 +20,7 @@ const OrganizationSchema = new Schema({
     url: String,
     apiKey: String,
     dreamsCategoryId: Number,
-    minPostLength: {
-      type: Number,
-      default: 20,
-    },
+    minPostLength: Number
   },
   finishedTodos: {
     type: Boolean,
