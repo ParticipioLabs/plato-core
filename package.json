@@ -1,10 +1,12 @@
 {
   "name": "@sensestack/plato-core",
-  "version": "1.0.7",
+  "version": "2.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "db:introspect": "dotenv -- prisma introspect",
+    "db:generate": "dotenv -- prisma generate",
+    "postinstall": "tsc && cp src/index.d.ts dist/index.d.ts && npx prisma@3.0.2 generate"
   },
   "repository": {
     "type": "git",
@@ -17,6 +19,11 @@
   },
   "homepage": "https://github.com/Edgeryders-Participio/plato-core#readme",
   "dependencies": {
-    "mongoose": "^5.10.13"
+    "@prisma/client": "^3.0.2"
+  },
+  "devDependencies": {
+    "dotenv-cli": "^4.0.0",
+    "prisma": "^3.0.2",
+    "typescript": "^4.4.3"
   }
 }
