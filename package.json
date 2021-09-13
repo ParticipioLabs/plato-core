@@ -1,12 +1,12 @@
 {
-  "name": "@sensestack/plato-core",
-  "version": "2.0.0",
+  "name": "@sensestack/cobudget-core",
+  "version": "1.0.3",
   "description": "",
   "main": "index.js",
   "scripts": {
     "db:introspect": "dotenv -- prisma introspect",
     "db:generate": "dotenv -- prisma generate",
-    "postinstall": "tsc && cp src/index.d.ts dist/index.d.ts && npx prisma@3.0.2 generate"
+    "postinstall": "npx prisma@3.0.2 generate"
   },
   "repository": {
     "type": "git",
@@ -23,7 +23,6 @@
   },
   "devDependencies": {
     "dotenv-cli": "^4.0.0",
-    "prisma": "^3.0.2",
-    "typescript": "^4.4.3"
+    "prisma": "^3.0.2"
   }
 }
