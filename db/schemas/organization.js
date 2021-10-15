@@ -5,6 +5,7 @@ const OrganizationSchema = new Schema({
     type: String,
     required: true,
   },
+  info: String,
   subdomain: {
     type: String,
     required: true,
